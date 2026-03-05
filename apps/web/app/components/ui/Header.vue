@@ -1,8 +1,10 @@
 <template>
   <MegaMenu :categories="categoryTree">
     <template v-if="viewport.isGreaterOrEquals('md')">
-      <UiSearch class="hidden md:block flex-1" />
+      
       <nav class="hidden ml-4 md:flex md:flex-row md:flex-nowrap">
+      
+        </UiButton>
         <template v-if="localeCodes.length > 1">
           <UiButton
             v-if="!isLanguageSelectOpen"
@@ -123,6 +125,16 @@
         >
           <SfIconPerson />
         </UiButton>
+        <UiButton
+        variant="tertiary"
+        class="relative text-white hover:text-white active:text-white hover:bg-header-400 active:bg-header-400 rounded-md"
+        square
+        :style="{ color: iconColor }"
+        :aria-label="t('common.navigation.openSearchModal')"
+        @click="searchModalOpen"
+      >
+        <SfIconSearch />
+      </UiButton>
       </nav>
     </template>
 
@@ -139,16 +151,7 @@
       >
         <SfIconLanguage />
       </UiButton>
-      <UiButton
-        variant="tertiary"
-        class="relative text-white hover:text-white active:text-white hover:bg-header-400 active:bg-header-400 rounded-md md:hidden"
-        square
-        :style="{ color: iconColor }"
-        :aria-label="t('common.navigation.openSearchModal')"
-        @click="searchModalOpen"
-      >
-        <SfIconSearch />
-      </UiButton>
+      
     </div>
   </MegaMenu>
   <LanguageSelector />
