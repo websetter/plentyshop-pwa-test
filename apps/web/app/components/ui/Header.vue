@@ -127,7 +127,7 @@
         </UiButton>
         <UiButton
         variant="tertiary"
-        class="relative text-white hover:text-white active:text-white hover:bg-header-400 active:bg-header-400 rounded-md"
+        class="test2 relative text-white hover:text-white active:text-white hover:bg-header-400 active:bg-header-400 rounded-md"
         square
         :style="{ color: iconColor }"
         :aria-label="t('common.navigation.openSearchModal')"
