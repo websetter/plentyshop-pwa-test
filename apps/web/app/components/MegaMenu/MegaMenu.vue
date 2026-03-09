@@ -6,6 +6,13 @@
       data-testid="navbar-top"
     >
       <div class="flex items-center">
+      <NuxtLink
+          :to="localePath(paths.home)"
+          :aria-label="t('common.actions.goToHomepage')"
+          class="flex shrink-0 w-full lg:w-48 items-center mr-auto text-white md:mr-10 focus-visible:outline focus-visible:outline-offset focus-visible:rounded-sm"
+        >
+          <UiLogo />
+        </NuxtLink>
         <UiButton
           v-if="viewport.isLessThan('lg')"
           variant="tertiary"
@@ -19,7 +26,7 @@
         </UiButton>
 <nav v-if="viewport.isGreaterOrEquals('lg')" ref="floatingRef">
       <ul
-        class="flex flex-wrap px-6 py-2 bg-white border-b border-b-neutral-200 border-b-solid"
+        class="flex flex-wrap px-6 py-2"
         @blur="
           (event: FocusEvent) => {
             if (!(event.currentTarget as Element).contains(event.relatedTarget as Element)) {
@@ -210,13 +217,7 @@
         </nav>
       </SfDrawer>
     </template>
-        <NuxtLink
-          :to="localePath(paths.home)"
-          :aria-label="t('common.actions.goToHomepage')"
-          class="flex shrink-0 w-full lg:w-48 items-center mr-auto text-white md:mr-10 focus-visible:outline focus-visible:outline-offset focus-visible:rounded-sm"
-        >
-          <UiLogo />
-        </NuxtLink>
+        
       </div>
 
       <slot />
@@ -272,7 +273,7 @@ const triggerReference = ref();
 const tappedCategories = ref<Map<number, boolean>>(new Map());
 const TOUCH_DETECTION_THRESHOLD = 500;
 const categoryButtonClasses =
-  'inline-flex items-center justify-center gap-2 font-medium text-base rounded-md py-2 px-4 group mr-2 !text-neutral-900 hover:bg-secondary-100 hover:!text-neutral-700 active:!bg-neutral-300 active:!text-neutral-900';
+  'inline-flex items-center justify-center gap-2 font-medium text-base rounded-md py-2 px-4 group mr-2 text-white hover:bg-secondary-100 hover:!text-neutral-700 active:!bg-neutral-300 active:text-white';
 let removeHook: () => void;
 
 const trapFocusOptions = {
