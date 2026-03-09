@@ -181,7 +181,7 @@
     <Register v-else :is-modal="true" @change-view="isLogin = true" @registered="closeAuthentication" />
   </UiModal>
 
-  <NuxtLazyHydrate v-if="viewport.isLessThan('lg')" when-idle>
+  <NuxtLazyHydrate  when-idle>
     <SfModal
       v-model="isSearchModalOpen"
       class="w-full h-full z-50"
