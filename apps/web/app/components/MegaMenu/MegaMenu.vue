@@ -17,20 +17,7 @@
         >
           <SfIconMenu aria-hidden="true" />
         </UiButton>
-
-        <NuxtLink
-          :to="localePath(paths.home)"
-          :aria-label="t('common.actions.goToHomepage')"
-          class="flex shrink-0 w-full lg:w-48 items-center mr-auto text-white md:mr-10 focus-visible:outline focus-visible:outline-offset focus-visible:rounded-sm"
-        >
-          <UiLogo />
-        </NuxtLink>
-      </div>
-
-      <slot />
-    </div>
-
-    <nav v-if="viewport.isGreaterOrEquals('lg')" ref="floatingRef">
+<nav v-if="viewport.isGreaterOrEquals('lg')" ref="floatingRef">
       <ul
         class="flex flex-wrap px-6 py-2 bg-white border-b border-b-neutral-200 border-b-solid"
         @blur="
@@ -223,6 +210,19 @@
         </nav>
       </SfDrawer>
     </template>
+        <NuxtLink
+          :to="localePath(paths.home)"
+          :aria-label="t('common.actions.goToHomepage')"
+          class="flex shrink-0 w-full lg:w-48 items-center mr-auto text-white md:mr-10 focus-visible:outline focus-visible:outline-offset focus-visible:rounded-sm"
+        >
+          <UiLogo />
+        </NuxtLink>
+      </div>
+
+      <slot />
+    </div>
+
+    
   </header>
 </template>
 
