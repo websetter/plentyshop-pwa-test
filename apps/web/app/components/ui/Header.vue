@@ -4,7 +4,7 @@
       
       <nav class="hidden ml-4 md:flex md:flex-row md:flex-nowrap">
       
-        </UiButton>
+       
         <template v-if="localeCodes.length > 1">
           <UiButton
             v-if="!isLanguageSelectOpen"
