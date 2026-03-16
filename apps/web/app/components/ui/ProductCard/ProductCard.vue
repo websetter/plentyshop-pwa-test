@@ -50,15 +50,7 @@
         />
       </SfLink>
 
-      <template v-if="configuration?.showWishlistButton">
-        <slot name="wishlistButton">
-          <WishlistButton
-            square
-            class="absolute bottom-0 right-0 mr-2 mb-2 bg-white ring-1 ring-inset ring-neutral-200 !rounded-full"
-            :product="product"
-          />
-        </slot>
-      </template>
+      
     </div>
 
     <div
@@ -123,6 +115,15 @@
             </span>
           </div>
         </template>
+        <template >
+        <slot name="wishlistButton">
+          <WishlistButton
+            square
+            class="btn btn-primary"
+            :product="product"
+          />
+        </slot>
+      </template>
         <template v-if="key === 'addToCart' && configuration?.fields?.addToCart">
           <UiButton
             v-if="canAddFromCategory"
