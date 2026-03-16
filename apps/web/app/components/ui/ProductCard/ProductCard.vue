@@ -114,44 +114,8 @@
               {{ format(crossedPrice) }}
             </span>
           </div>
-        </template>
-        <template >
-        <slot name="wishlistButton">
-          <WishlistButton
-            square
-            class="btn btn-primary"
-            :product="product"
-          />
-        </slot>
-      </template>
-        <template v-if="key === 'addToCart' && configuration?.fields?.addToCart">
-          <UiButton
-            v-if="canAddFromCategory"
-            size="sm"
-            class="min-w-[80px] w-fit"
-            data-testid="add-to-basket-short"
-            :disabled="loading"
-            :variant="configuration?.addToCartStyle || 'primary'"
-            @click="addWithLoader(Number(productGetters.getId(product)))"
-          >
-            <template v-if="!loading" #prefix>
-              <SfIconShoppingCart size="sm" />
-            </template>
-            <SfLoaderCircular v-if="loading" class="flex justify-center items-center" size="sm" />
-            <span v-else>{{ t('common.actions.add') }}</span>
-          </UiButton>
-          <UiButton
-            v-else
-            :variant="configuration?.addToCartStyle || 'primary'"
-            type="button"
-            :tag="NuxtLink"
-            :to="productPath"
-            size="sm"
-            class="w-fit"
-          >
-            <span>{{ t('common.actions.showOptions') }}</span>
-          </UiButton>
-        </template>
+        </template>    
+       
       </template>
     </div>
   </div>
