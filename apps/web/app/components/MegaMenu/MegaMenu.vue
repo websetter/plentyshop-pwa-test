@@ -223,7 +223,7 @@
       <slot />
     </div>
 
-   <div class="laufband" :style="{ backgroundColor: secondaryColor }">
+   <div class="laufband" class="bg-secondary">
     <div class="laufband-track">
       <div class="laufband-content">
         <p v-if="Boolean(t('homepage.laufband1'))">{{ t('homepage.laufband1') }}</p>
@@ -272,7 +272,6 @@ const router = useRouter();
 const { close, open, isOpen, activeNode, category, setCategory } = useMegaMenu();
 const { setDrawerOpen } = useDrawerState();
 const { getSetting: getHeaderBackgroundColor } = useSiteSettings('headerBackgroundColor');
-const { getSetting: secondaryColor } = useSiteSettings('secondaryColor');
 const { getSetting: getIconColor } = useSiteSettings('iconColor');
 const { referenceRef, floatingRef, style } = useDropdown({
   isOpen,
@@ -282,7 +281,6 @@ const { referenceRef, floatingRef, style } = useDropdown({
 });
 const iconColor = computed(() => getIconColor());
 const headerBackgroundColor = computed(() => getHeaderBackgroundColor());
-const secondaryColor = computed(() => getSecondaryColor());
 
 const isUsingTouch = ref(false);
 const lastTouchTime = ref(0);
