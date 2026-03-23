@@ -114,8 +114,7 @@
               {{ format(crossedPrice) }}
             </span>
           </div>
-        </template>    
-       
+        </template>  
       </template>
     </div>
   </div>

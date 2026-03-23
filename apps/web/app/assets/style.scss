@@ -81,3 +81,51 @@ apple-pay-button {
     vertical-align: middle;
   }
 }
+
+
+
+.laufband {
+  color: #fff;
+  padding: 10px 8px 8px;
+  border-top: 2px solid #fff;
+  background-color: blue;
+  margin: 0;
+  text-align: center;
+  margin-bottom: -7px;
+      overflow: hidden;
+}
+.laufband-track {
+    display: flex;
+    white-space: nowrap;
+    animation: laufband 30s linear infinite;
+    width: max-content;
+    will-change: transform;
+}
+.laufband-content {
+    display: inline-flex;
+    gap: 2rem;
+    margin-right: 20px;
+}
+.laufband p {
+  display: inline-flex;
+  align-items: center;
+  gap: 0 0.6rem;
+  margin-bottom: 0;
+}
+.laufband p::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: #fff;
+    display: inline-block;
+    margin-left: 20px;
+}
+@keyframes laufband {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

@@ -223,6 +223,24 @@
       <slot />
     </div>
 
+   <div class="laufband">
+    <div class="laufband-track">
+      <div class="laufband-content">
+        <p>{{ t('hompage.laufband1') }}</p>
+        <p>{{ t('hompage.laufband2') }}</p>
+        <p>{{ t('hompage.laufband3') }}</p>
+        <p v-if="Boolean(t('hompage.laufband4'))">{{ t('hompage.laufband4') }}</p>
+      </div>
+      <div class="laufband-content">
+        <p>{{ t('hompage.laufband1') }}</p>
+        <p>{{ t('hompage.laufband2') }}</p>
+        <p>{{ t('hompage.laufband3') }}</p>
+        <p v-if="Boolean(t('hompage.laufband4'))">{{ t('hompage.laufband4') }}</p>
+      </div>
+     
+    </div>
+    </div>
+
     
   </header>
 </template>
