@@ -223,18 +223,18 @@
       <slot />
     </div>
 
-   <div class="laufband">
+   <div class="laufband" :style="{ backgroundColor: secondaryColor }">
     <div class="laufband-track">
       <div class="laufband-content">
-        <p>{{ t('homepage.laufband1') }}</p>
-        <p>{{ t('homepage.laufband2') }}</p>
-        <p>{{ t('homepage.laufband3') }}</p>
+        <p v-if="Boolean(t('homepage.laufband1'))">{{ t('homepage.laufband1') }}</p>
+        <p v-if="Boolean(t('homepage.laufband2'))">{{ t('homepage.laufband2') }}</p>
+        <p v-if="Boolean(t('homepage.laufband3'))">{{ t('homepage.laufband3') }}</p>
         <p v-if="Boolean(t('homepage.laufband4'))">{{ t('homepage.laufband4') }}</p>
       </div>
       <div class="laufband-content">
-        <p>{{ t('homepage.laufband1') }}</p>
-        <p>{{ t('homepage.laufband2') }}</p>
-        <p>{{ t('homepage.laufband3') }}</p>
+        <p v-if="Boolean(t('homepage.laufband1'))">{{ t('homepage.laufband1') }}</p>
+        <p v-if="Boolean(t('homepage.laufband2'))">{{ t('homepage.laufband2') }}</p>
+        <p v-if="Boolean(t('homepage.laufband4'))">{{ t('homepage.laufband3') }}</p>
         <p v-if="Boolean(t('homepage.laufband4'))">{{ t('homepage.laufband4') }}</p>
       </div>
      
