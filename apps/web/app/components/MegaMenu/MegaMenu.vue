@@ -223,7 +223,7 @@
       <slot />
     </div>
 
-   <div class="laufband" class="bg-secondary">
+   <div class="laufband bg-secondary">
     <div class="laufband-track">
       <div class="laufband-content">
         <p v-if="Boolean(t('homepage.laufband1'))">{{ t('homepage.laufband1') }}</p>
