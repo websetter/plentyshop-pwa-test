@@ -225,17 +225,17 @@
 
    <div class="laufband bg-secondary">
     <div class="laufband-track">
-      <div class="laufband-content">
-        <p v-if="Boolean(t('homepage.laufband1'))">{{ t('homepage.laufband1') }}</p>
-        <p v-if="Boolean(t('homepage.laufband2'))">{{ t('homepage.laufband2') }}</p>
-        <p v-if="Boolean(t('homepage.laufband3'))">{{ t('homepage.laufband3') }}</p>
-        <p v-if="Boolean(t('homepage.laufband4'))">{{ t('homepage.laufband4') }}</p>
+       <div class="laufband-content">
+        <p v-if="Boolean(t('homepage.laufband1')) && !t('homepage.laufband1').includes('NULL')">{{ t('homepage.laufband1') }}</p>
+        <p v-if="Boolean(t('homepage.laufband2')) && !t('homepage.laufband2').includes('NULL')">{{ t('homepage.laufband2') }}</p>
+        <p v-if="Boolean(t('homepage.laufband3')) && !t('homepage.laufband3').includes('NULL')">{{ t('homepage.laufband3') }}</p>
+        <p v-if="Boolean(t('homepage.laufband4')) && !t('homepage.laufband4').includes('NULL')">{{ t('homepage.laufband4') }}</p>
       </div>
       <div class="laufband-content">
-        <p v-if="Boolean(t('homepage.laufband1'))">{{ t('homepage.laufband1') }}</p>
-        <p v-if="Boolean(t('homepage.laufband2'))">{{ t('homepage.laufband2') }}</p>
-        <p v-if="Boolean(t('homepage.laufband4'))">{{ t('homepage.laufband3') }}</p>
-        <p v-if="Boolean(t('homepage.laufband4'))">{{ t('homepage.laufband4') }}</p>
+        <p v-if="Boolean(t('homepage.laufband1')) && !t('homepage.laufband1').includes('NULL')">{{ t('homepage.laufband1') }}</p>
+        <p v-if="Boolean(t('homepage.laufband2')) && !t('homepage.laufband2').includes('NULL')">{{ t('homepage.laufband2') }}</p>
+        <p v-if="Boolean(t('homepage.laufband3')) && !t('homepage.laufband3').includes('NULL')">{{ t('homepage.laufband3') }}</p>
+        <p v-if="Boolean(t('homepage.laufband4')) && !t('homepage.laufband4').includes('NULL')">{{ t('homepage.laufband4') }}</p>
       </div>
      
     </div>
