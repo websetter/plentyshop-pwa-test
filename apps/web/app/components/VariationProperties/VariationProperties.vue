@@ -1,6 +1,6 @@
 <template>
   <div v-for="(group, groupIndex) in variationPropertyGroups" :key="`group-${groupIndex}`">
-    <template v-for="(variationProperty, propIndex) in group.properties" :key="`group-prop-${propIndex}`">
+    <div v-for="(variationProperty, propIndex) in group.properties" :class="'group_' + group.id" :key="`group-prop-${propIndex}`">
       <div v-if="propertyHasNameOrValue(variationProperty)" class="flex items-center variation-properties">
         <ClientOnly>
           <Component
@@ -10,7 +10,7 @@
           />
         </ClientOnly>
       </div>
-    </template>
+    </div>
   </div>
 </template>
 
